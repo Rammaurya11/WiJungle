@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        display: flex;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .all{
+        display: flex;
+        flex-direction: row;
+        /* border: 1px solid; */
+
+    }
+   .card1{
+    height: 100vh;
+    /* border: 1px solid; */
+    display: flex;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+   }
+.card2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
+.login{
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+p{
+    font-size: 26px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+input{
+    width: 300px;
+    height: 32px;
+    border-radius: 10px;
+    border: 1px solid;
+    
+}
+button{
+    border-radius: 10px;
+    height: 32px;
+    background-color: rgb(3, 3, 82);
+    color: white;
+    margin: 32px 0px;
+    border: none;
+}
+    
+</style>
+<body>
+    <div class="all">
+  <div class="card1">
+    <img src="aimage.png" alt="">
+  </div>
+  <div class="card2">
+    <div class="login">
+    <p>scientific calculator</p>
+    <div class="form">
+        <div class="form-group">
+          <!-- <label for=""></label> -->
+          <input type="text"class="form-control" id="farm-name" name="farm-name" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <!-- <label for=""></label> -->
+          <input type="password"class="form-control" name="" id="" placeholder="Password">
+        </div>
+        <button id="next-page-button">Log in</button>
+        
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    document.getElementById('next-page-button').addEventListener('click', function() {
+        // Get farm data from input fields
+        var farmName = document.getElementById('farm-name').value;
+
+        // Store farm data in localStorage
+        localStorage.setItem('farmName', farmName);
+
+        // Navigate to the next page
+        window.location.href = 'main.html'; // Replace with the actual next page URL
+    });
+</script>
+</body>
+
+
+</html>
